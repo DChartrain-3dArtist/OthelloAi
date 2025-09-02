@@ -6,7 +6,7 @@
 # ---------------------------------------------------------------
 
 # Étape 1 : Image runtime .NET 8
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
+FROM mcr.microsoft.com/dotnet/aspnet:9.0
 WORKDIR /app
 EXPOSE 3000
 
