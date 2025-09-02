@@ -290,7 +290,7 @@ export class GameComponent implements OnInit {
   /* ------------------------------
      Fonctions utilitaires
   ------------------------------ */
-  forceEndgame() {
+  /*forceEndgame() {
     if (this.playerScore > this.aiScore) {
       this.endgameMessage = 'Vous avez gagné !';
       this.endgameClass = 'victory';
@@ -310,7 +310,7 @@ export class GameComponent implements OnInit {
     this.showEndgame = true;
     this.showTop10EntryPanel = true;
     this.top10PlayerName = `Player-${Math.floor(Math.random() * 1000)}`;
-  }
+  }*/
 
   // Transforme l’affichage du panneau selon l’onglet actif
   get panelTransform(): string {

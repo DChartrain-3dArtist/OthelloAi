@@ -56,7 +56,7 @@ OthelloAi/
 ---
 
 ## 🏗️ Architecture complète
-```
+
 ┌─────────────────────────────┐
 │         FRONTEND            │
 │       (Angular 17+)         │
@@ -151,7 +151,6 @@ OthelloAi/
 │ │ - Met à jour TopScores  │
 │ └─────────────────────────┘
 └─────────────────────────────┘
-```
 
 **Explication du flux complet** :
 
