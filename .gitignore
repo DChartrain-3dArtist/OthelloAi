@@ -52,3 +52,20 @@ CodeCoverage/
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+
+# --- Angular ---
+/frontend/othello-frontend/node_modules/
+/frontend/othello-frontend/.angular/
+/frontend/othello-frontend/.vscode/
+/frontend/othello-frontend/dist/
+/frontend/othello-frontend/tmp/
+/frontend/othello-frontend/package-lock.json
+
+# --- .NET (au cas où ça manque déjà) ---
+/backend/OthelloAiBackend/bin/
+/backend/OthelloAiBackend/obj/
+/backend/OthelloAiBackend/wwwroot/*
+
+# --- OS files ---
+.DS_Store
+Thumbs.db

@@ -1,0 +1,129 @@
+@use 'sass:color';
+
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  min-height: 100dvh;
+  padding: 1rem;
+}
+
+.home__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.home__title {
+  font-size: clamp(1.4rem, 3.5vw, 2rem);
+  font-weight: 700;
+}
+
+.home__content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  align-items: start;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: 900px) {
+  .home__content {
+    grid-template-columns: minmax(0, 1fr) 320px;
+  }
+}
+
+.home__board {
+  display: block;
+}
+
+.home__dashboard {
+  display: grid;
+  grid-auto-rows: min-content;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--panel-bg, #0e1a14);
+  border: 1px solid var(--panel-border, #143227);
+  border-radius: 0.8rem;
+}
+
+.score {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.score__item {
+  display: grid;
+  grid-template-columns: 28px 1fr auto;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.6rem;
+  background: var(--score-bg, #0b241c);
+  border: 1px solid var(--score-border, #133427);
+}
+
+.score__label {
+  opacity: 0.9;
+}
+
+.score__value {
+  font-weight: 700;
+}
+
+.winner {
+  padding: 0.75rem;
+  border-radius: 0.6rem;
+  text-align: center;
+  background: var(--winner-bg, #0b241c);
+  border: 1px solid var(--winner-border, #133427);
+}
+
+/* Reuse disc styles from board */
+.disc {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: transparent;
+}
+
+.disc--black {
+  background: radial-gradient(circle at 30% 30%, #3b3b3b, #121212 70%);
+}
+
+.disc--white {
+  background: radial-gradient(circle at 30% 30%, #ffffff, #d9d9d9 70%);
+}
+
+/* Buttons */
+.btn {
+  --btn-bg: var(--primary-600, #1a8f6b);
+  --btn-border: var(--primary-700, #167b5c);
+  --btn-text: #ffffff;
+  appearance: none;
+  border: 1px solid var(--btn-border);
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  border-radius: 0.6rem;
+  padding: 0.6rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 120ms ease, filter 200ms ease, box-shadow 200ms ease;
+}
+
+.btn:hover {
+  filter: brightness(1.05);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+

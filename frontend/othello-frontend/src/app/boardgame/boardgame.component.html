@@ -1,0 +1,35 @@
+<!-- =========================================================================
+     Fichier : boardgame.component.html
+     Description : Plateau de jeu Othello
+     - Affiche le plateau sous forme de grille
+     - Gère les clics du joueur
+     - Affiche les animations de retournement des pions
+   ========================================================================= -->
+
+<!-- Conteneur principal du plateau -->
+<div class="board-container">
+
+  <!-- Boucle sur chaque ligne du plateau -->
+  <div class="row" *ngFor="let row of board; let i = index">
+
+    <!-- Boucle sur chaque cellule de la ligne -->
+    <div class="cell" *ngFor="let cell of row; let j = index"
+         (click)="handleClick(i,j)"         
+         [class.valid]="isValidMove(i,j)">  <!-- Ajoute une classe si le coup est valide -->
+
+      <!-- Conteneur pour l'animation de retournement -->
+      <div class="flip-container" [class.flipping]="isFlipping(i,j)">
+        <div class="flipper">
+
+          <!-- Face avant : valeur avant l'animation -->
+          <div class="front" [ngClass]="getFromCell(i,j)"></div>
+
+          <!-- Face arrière : valeur après l'animation -->
+          <div class="back" [ngClass]="getToCell(i,j)"></div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
